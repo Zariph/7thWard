@@ -55,7 +55,7 @@
             // Function to fetch data from server and populate the table
             function populateTable() {
                 $.ajax({
-                    url: "getData.php", // Replace with your PHP endpoint to fetch data
+                    url: "https://zariph.github.io/7thWard/getData.php", // Replace with your PHP endpoint to fetch data
                     method: "GET",
                     success: function(data) {
                         $("#table-body").html(data); // Insert data into the table body
@@ -78,7 +78,7 @@
                 var newValue = $(this).text();
 
                 $.ajax({
-                    url: "updateName.php",
+                    url: "https://zariph.github.io/7thWard/updateName.php",
                     method: "POST",
                     data: { id: id, column: column, newValue: newValue },
                     success: function(data) {
