@@ -1,48 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Name Table</title>
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0;url=index.php">
 </head>
+
 <body>
-    <h1>Name Table</h1>
-
-    <!-- Form to add names -->
-    <form action="addName.php" method="post">
-        <input type="text" name="name" placeholder="Enter a name">
-        <input type="submit" value="Add Name">
-    </form>
-
-    <!-- Display names from the database -->
-    <h2>Names:</h2>
-    <ul>
-        <?php
-        $servername = "sql3.freesqldatabase.com";
-        $username = "sql3651361";
-        $password = "fNNigty7qc";
-        $dbname = "sql3651361";
-
-        // Create a connection to the database
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // Retrieve names from the "data" table
-        $sql = "SELECT Name1 FROM data";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<li>" . $row["Name1"] . "</li>";
-            }
-        } else {
-            echo "<li>No names found.</li>";
-        }
-
-        $conn->close();
-        ?>
-    </ul>
+    <p>If you are not redirected, <a href="index.php">click here</a>.</p>
 </body>
+
 </html>
